@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background: #111827;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #3b82f6;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.low { color: #22c55e; }
+.medium { color: #facc15; }
+.high { color: #ef4444; }
+
+.risk-bar {
+    height: 10px;
+    background: #334155;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.risk-fill {
+    height: 10px;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}

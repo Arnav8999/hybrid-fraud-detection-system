@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detection Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>⚡ Fraud AI</h2>
+        <p>Hybrid Detection Engine</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <h1>Fraud Monitoring Dashboard</h1>
+
+        <!-- Transaction Form -->
+        <div class="card">
+            <h2>Analyze Transaction</h2>
+
+            <input type="number" id="user_id" placeholder="User ID">
+            <input type="number" id="amount" placeholder="Amount">
+            <input type="number" id="hour" placeholder="Hour (0-23)">
+            <button onclick="addTransaction()">Analyze</button>
+
+            <div id="result"></div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total Transactions</h3>
+                <p id="total">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>High Risk</h3>
+                <p id="high">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Fraud %</h3>
+                <p id="percentage">0%</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Avg Risk Score</h3>
+                <p id="avg">0</p>
+            </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="card">
+            <h2>Fraud Risk Distribution</h2>
+            <canvas id="fraudChart"></canvas>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
